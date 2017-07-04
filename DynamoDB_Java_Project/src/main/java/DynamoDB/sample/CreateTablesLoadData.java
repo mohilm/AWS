@@ -31,10 +31,10 @@ public class CreateTablesLoadData {
     static SimpleDateFormat dateFormatter = new SimpleDateFormat(
             "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
-    static String productCatalogTableName = "ProductCatalog";
-    static String forumTableName = "Forum";
-    static String threadTableName = "Thread";
-    static String replyTableName = "Reply";
+    static String productCatalogTableName = "mohil-ProductCatalog";
+    static String forumTableName = "mohil-Forum";
+    static String threadTableName = "mohil-Thread";
+    static String replyTableName = "mohil-Reply";
 
     public static void main(String[] args) throws Exception {
 
@@ -49,10 +49,10 @@ public class CreateTablesLoadData {
             // Parameter3: writes per second // Parameter4/5: partition key and data type
             // Parameter6/7: sort key and data type (if applicable)
 
-            createTable(mohil-productCatalogTableName, 10L, 5L, "Id", "N");
-            createTable(mohil-forumTableName, 10L, 5L, "Name", "S");
-            createTable(mohil-threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
-            createTable(mohil-replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
+            createTable(productCatalogTableName, 10L, 5L, "Id", "N");
+            createTable(forumTableName, 10L, 5L, "Name", "S");
+            createTable(threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
+            createTable(replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
 
             loadSampleProducts(productCatalogTableName);
             loadSampleForums(forumTableName);
