@@ -49,10 +49,10 @@ public class CreateTablesLoadData {
             // Parameter3: writes per second // Parameter4/5: partition key and data type
             // Parameter6/7: sort key and data type (if applicable)
 
-            createTable(productCatalogTableName, 10L, 5L, "Id", "N");
-            createTable(forumTableName, 10L, 5L, "Name", "S");
-            createTable(threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
-            createTable(replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
+            createTable(mohil-productCatalogTableName, 10L, 5L, "Id", "N");
+            createTable(mohil-forumTableName, 10L, 5L, "Name", "S");
+            createTable(mohil-threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
+            createTable(mohil-replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
 
             loadSampleProducts(productCatalogTableName);
             loadSampleForums(forumTableName);
